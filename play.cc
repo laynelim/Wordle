@@ -9,6 +9,7 @@ int main(int argc, char** argv) {
   }
   if (argc==2) {
     Wordle wordle {argv[1]};
+    cout << "Game Begins" << endl;
     wordle.playGame();
   }
   return 0;

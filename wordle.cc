@@ -28,7 +28,7 @@ void Wordle::playGame() {
     char g;
     bool badLen = false;
     bool won= false;
-    
+    cout << "Enter " << lengthAns << " length word as guess: ";
     while (true) {
         if (cin >> curGuess) {
             ++guesses;
