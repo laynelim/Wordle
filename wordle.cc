@@ -28,13 +28,10 @@ void Wordle::playGame() {
     char g;
     bool badLen = false;
     bool won= false;
-    cout << "Enter " << lengthAns << " length word as guess: ";
+    cout << "Enter a " << lengthAns << " letter word as guess: " ;
     while (true) {
         if (cin >> curGuess) {
             ++guesses;
-            if (!badLen) {
-                cout << "Enter " << lengthAns << " length word as guess: ";
-            }
             if (guesses > 6 ){
                 cout << "Out of guesses! The word was: " << answer << endl;
                 break;
@@ -77,6 +74,9 @@ void Wordle::playGame() {
                     }
                     cout << endl;
                 }
+            }
+            if (!badLen) {
+                cout << "Enter a " << lengthAns << " letter word as guess: ";
             }
         } else {
             if (guesses < 6 && !won){
